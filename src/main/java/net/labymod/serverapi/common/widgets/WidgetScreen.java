@@ -6,7 +6,6 @@ import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonSerializer;
 import net.labymod.serverapi.common.widgets.components.Widget;
-import net.labymod.serverapi.common.widgets.components.widgets.InventorySlotWidget;
 import net.labymod.serverapi.common.widgets.util.EnumScreenAction;
 import net.labymod.serverapi.common.widgets.util.EnumWidget;
 
@@ -64,17 +63,6 @@ public class WidgetScreen {
      */
     public void addWidget(Widget widget) {
         this.widgets.add(widget);
-    }
-
-    /**
-     * Set an inventory slot widget to the given slot index
-     *
-     * @param slotIndex Inventory slot index of the opened inventory
-     * @param url       Inventory slot image url
-     */
-    public void setSlot(int slotIndex, String url) {
-        this.widgets.removeIf(w -> w.getId() == slotIndex);
-        this.widgets.add(new InventorySlotWidget(slotIndex, url));
     }
 
     /**
