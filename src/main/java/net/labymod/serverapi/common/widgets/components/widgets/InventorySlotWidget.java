@@ -1,16 +1,16 @@
 package net.labymod.serverapi.common.widgets.components.widgets;
 
-
 import com.google.gson.annotations.SerializedName;
 import net.labymod.serverapi.common.widgets.components.ContainerWidget;
 import net.labymod.serverapi.common.widgets.util.Anchor;
 
 /**
- * Widget to render a custom image
+ * Widget to render an advanced inventory slot
  *
  * @author LabyStudio
+ * @since 3.8.26
  */
-public class ImageWidget extends ContainerWidget {
+public class InventorySlotWidget extends ContainerWidget {
 
     /**
      * Remote url of the image to render
@@ -42,29 +42,13 @@ public class ImageWidget extends ContainerWidget {
     private int cutHeight = 256;
 
     /**
-     * Create a custom texture to render
+     * Create an inventory slot widget for a wrapped inventory
      *
-     * @param id      Unique id of the widget
-     * @param anchor  Anchor point for orientation
-     * @param offsetX X anchor offset in pixel
-     * @param offsetY Y anchor offset in pixel
-     * @param width   The width of the container in pixels
-     * @param height  The height of the container in pixels
-     * @param url     Remote url of the image to render
+     * @param slotIndex The inventory slot index. (This is also the unique id)
+     * @param url       Remote url of the image to render
      */
-    public ImageWidget(int id, Anchor anchor, double offsetX, double offsetY, int width, int height, String url) {
-        super(id, anchor, offsetX, offsetY, width, height);
-        this.url = url;
-    }
-
-    /**
-     * Create an image widget for a wrapped inventory
-     *
-     * @param id  The inventory slot index
-     * @param url Remote url of the image to render
-     */
-    public ImageWidget(int id, String url) {
-        super(id, new Anchor(0, 0), 0, 0, 0, 0);
+    public InventorySlotWidget(int slotIndex, String url) {
+        super(slotIndex, new Anchor(0, 0), 0, 0, 0, 0);
         this.url = url;
     }
 

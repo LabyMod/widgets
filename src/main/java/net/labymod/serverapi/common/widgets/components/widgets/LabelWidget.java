@@ -19,12 +19,16 @@ public class LabelWidget extends Widget {
     private JsonElement value;
 
     /**
-     * String alignment.<br> - 0: Left alignment<br> - 1: Center alignment<br> - 2: Right alignment
+     * String alignment.
+     * - 0: Left alignment
+     * - 1: Center alignment
+     * - 2: Right alignment
      */
     private int alignment;
 
     /**
-     * The scale of the string. The default scale is 1.0. To make it smaller by half, 0.5 must be specified.
+     * The scale of the string.
+     * The default scale is 1.0. To make it smaller by half, 0.5 must be specified.
      */
     private double scale;
 
