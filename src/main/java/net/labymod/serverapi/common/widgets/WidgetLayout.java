@@ -25,12 +25,23 @@ public class WidgetLayout {
     private int borderPaddingY;
 
     /**
-     *
+     * Default layout
      */
     public WidgetLayout() {
 
     }
 
+    /**
+     * Create inventory layout.
+     * This layout can transform the size, margin and padding of the Minecraft inventory slots
+     *
+     * @param slotWidth Slot width
+     * @param slotHeight Slot height
+     * @param slotMarginX Left and right space of the slots
+     * @param slotMarginY Top and bottom space of the slots
+     * @param borderPaddingX Left and right space between the slots and the background border
+     * @param borderPaddingY Top and bottom space between the slots and the background border
+     */
     public WidgetLayout(int slotWidth, int slotHeight, int slotMarginX, int slotMarginY, int borderPaddingX, int borderPaddingY) {
         this.slotWidth = slotWidth;
         this.slotHeight = slotHeight;
