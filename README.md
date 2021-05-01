@@ -15,21 +15,16 @@ Click [here](https://docs.labymod.net/pages/server/minecraft/screen/) for more d
 ### Serialize widgets
 ```java
 // Create new screen
-JsonObject screen = new JsonObject();
-screen.addProperty("id", 42); // Screen id. The client will send this id back on an interaction
-screen.addProperty("action", EnumScreenAction.OPEN.ordinal()); // Open the GUI
+WidgetScreen screen = new WidgetScreen(42); // The client will send this id back on an interaction
 
 // Centered anchor
-Anchor anchor = new Anchor(50, 50);
-
-// Create widget list
-List<Widget> widgets = new ArrayList<>();
-
+Anchor anchor = new Anchor(50, 50); // X: 50%   Y: 50%
+        
 // Add button to widget list
-widgets.add(new ButtonWidget(0, anchor, -50, 20, "Apply", 100, 20));
+screen.addWidget(new ButtonWidget(0, anchor, -50, 20, "Apply", 100, 20));
 
 // Serialize widgets
-screen.add("widgets", WidgetSerialization.toJsonArray(widgets));
+JsonObject object = screen.toJsonObject(EnumScreenAction.OPEN); // OPEN = Open the screen
 ```
 
 ### Anchor explanation image
