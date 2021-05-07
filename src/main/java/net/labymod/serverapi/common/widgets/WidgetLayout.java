@@ -10,19 +10,22 @@ import com.google.gson.annotations.SerializedName;
 public class WidgetLayout {
 
     @SerializedName("slot_width")
-    private int slotWidth;
+    private int slotWidth = 10;
     @SerializedName("slot_height")
-    private int slotHeight;
+    private int slotHeight = 10;
 
     @SerializedName("slot_margin_x")
-    private int slotMarginX;
+    private int slotMarginX = 5;
     @SerializedName("slot_margin_y")
-    private int slotMarginY;
+    private int slotMarginY = 5;
 
     @SerializedName("border_padding_x")
-    private int borderPaddingX;
+    private int borderPaddingX = 10;
     @SerializedName("border_padding_y")
-    private int borderPaddingY;
+    private int borderPaddingY = 10;
+
+    @SerializedName("font_size")
+    private double fontSize = 1;
 
     /**
      * Default layout
@@ -97,5 +100,13 @@ public class WidgetLayout {
 
     public void setBorderPaddingY(int borderPaddingY) {
         this.borderPaddingY = borderPaddingY;
+    }
+
+    public double getFontSize() {
+        return fontSize;
+    }
+
+    public void setFontSize(double fontSize) {
+        this.fontSize = fontSize;
     }
 }

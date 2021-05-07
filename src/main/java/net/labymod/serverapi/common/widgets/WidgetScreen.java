@@ -66,6 +66,15 @@ public class WidgetScreen {
     }
 
     /**
+     * Get widget layout
+     *
+     * @return The widget layout
+     */
+    public WidgetLayout getLayout() {
+        return layout;
+    }
+
+    /**
      * Convert widget screen to json object
      *
      * @param action Screen action
