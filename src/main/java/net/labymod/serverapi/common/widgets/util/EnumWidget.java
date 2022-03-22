@@ -1,11 +1,7 @@
 package net.labymod.serverapi.common.widgets.util;
 
 import net.labymod.serverapi.common.widgets.components.Widget;
-import net.labymod.serverapi.common.widgets.components.widgets.ButtonWidget;
-import net.labymod.serverapi.common.widgets.components.widgets.ColorPickerWidget;
-import net.labymod.serverapi.common.widgets.components.widgets.ImageWidget;
-import net.labymod.serverapi.common.widgets.components.widgets.LabelWidget;
-import net.labymod.serverapi.common.widgets.components.widgets.TextFieldWidget;
+import net.labymod.serverapi.common.widgets.components.widgets.*;
 
 /**
  * Enum with all widget components
@@ -17,7 +13,8 @@ public enum EnumWidget {
     TEXT_FIELD(TextFieldWidget.class),
     LABEL(LabelWidget.class),
     COLOR_PICKER(ColorPickerWidget.class),
-    IMAGE(ImageWidget.class);
+    IMAGE(ImageWidget.class),
+    DROPDOWN(DropdownWidget.class);
 
     /**
      * The class of the widget
